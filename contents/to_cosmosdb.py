@@ -89,9 +89,7 @@ with tab1:
                 {"role": "user", "content": marge_text}
             ],
             tools=[output_format],
-            temperature=0.3,
-            max_tokens=128000,
-            max_completion_tokens=128000
+            temperature=0.3
         )
 
         result = response.choices[0].message.tool_calls[0].function.arguments
